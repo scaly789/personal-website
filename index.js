@@ -1270,6 +1270,16 @@ window.addEventListener('keydown', (event) => {
          char.sprite = char.rightRun;
          char.frameLimit = 60;
          break;
+      case 'ArrowLeft':
+         leftPressed = true;
+         char.sprite = char.leftRun;
+         char.frameLimit = 60;
+         break;
+      case 'ArrowRight':
+         rightPressed = true;
+         char.sprite = char.rightRun;
+         char.frameLimit = 60;
+         break;
    }
 });
 
@@ -1281,6 +1291,16 @@ window.addEventListener('keyup', (event) => {
          char.frameLimit = 240;
          break;
       case 'd':
+         rightPressed = false;
+         char.sprite = char.rightStand;
+         char.frameLimit = 240;
+         break;
+      case 'ArrowLeft':
+         leftPressed = false;
+         char.sprite = char.leftStand;
+         char.frameLimit = 240;
+         break;
+      case 'ArrowRight':
          rightPressed = false;
          char.sprite = char.rightStand;
          char.frameLimit = 240;
