@@ -1,5 +1,5 @@
 //Selecting canvas from DOM and setting up for 2d game
-const canvas = document.querySelector('canvas');
+const canvas = document.querySelector('canvas')
 c = canvas.getContext('2d');
 canvas.width = 1024;
 canvas.height = 576;
