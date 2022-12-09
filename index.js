@@ -21,34 +21,34 @@ const nlp = './assets/nlp.png';
 const python = './assets/python.png';
 const runRight = './assets/runRight.png';
 const runLeft = './assets/runLeft.png';
+const standRight = './assets/standRight.png';
+const standLeft = './assets/standLeft.png';
 
 //Class for the moving character
 class Character {
    constructor() {
       this.x = 100;
       this.y = 310;
-      this.speed = 7;
+      this.speed = 5;
       this.width = 186.67;
       this.height = 200;
       this.frame = 0;
-      this.spriteInfo = {
-         run: {
-            right: createImage(runRight),
-            left: createImage(runLeft),
-            width: 1201
-         }
-      };
-      this.sprite = createImage(runRight);
-      this.spriteWidth = this.spriteInfo.run.width;
+      this.rightRun = createImage(runRight)
+      this.leftRun = createImage(runLeft)
+      this.rightStand = createImage(standRight)
+      this.leftStand = createImage(standLeft)
+      this.sprite = this.rightStand;
+      this.spriteWidth = 1201;
+      this.frameLimit = 240
    }
 
    draw() {
-      c.drawImage(this.sprite, Math.floor(this.frame / 10) * this.spriteWidth, 0, this.spriteWidth, 1340, this.x, this.y, this.width, this.height);
+      c.drawImage(this.sprite, Math.floor(this.frame / (this.frameLimit/6)) * this.spriteWidth, 0, this.spriteWidth, 1340, this.x, this.y, this.width, this.height);
    }
 
    update() {
       this.frame++;
-      if (this.frame > 60) {
+      if (this.frame > this.frameLimit) {
          this.frame = 0;
       }
       this.draw();
@@ -1262,9 +1262,13 @@ window.addEventListener('keydown', (event) => {
    switch (event.key) {
       case 'a':
          leftPressed = true;
+         char.sprite = char.leftRun;
+         char.frameLimit = 60;
          break;
       case 'd':
          rightPressed = true;
+         char.sprite = char.rightRun;
+         char.frameLimit = 60;
          break;
    }
 });
@@ -1273,9 +1277,13 @@ window.addEventListener('keyup', (event) => {
    switch (event.key) {
       case 'a':
          leftPressed = false;
+         char.sprite = char.leftStand;
+         char.frameLimit = 240;
          break;
       case 'd':
          rightPressed = false;
+         char.sprite = char.rightStand;
+         char.frameLimit = 240;
          break;
    }
 });
