@@ -1,5 +1,5 @@
 //Selecting canvas from DOM and setting up for 2d game
-const canvas = document.querySelector('canvas')
+const canvas = document.querySelector('canvas');
 c = canvas.getContext('2d');
 canvas.width = 1024;
 canvas.height = 576;
@@ -33,13 +33,13 @@ class Character {
       this.width = 186.67;
       this.height = 200;
       this.frame = 0;
-      this.rightRun = createImage(runRight)
-      this.leftRun = createImage(runLeft)
-      this.rightStand = createImage(standRight)
-      this.leftStand = createImage(standLeft)
+      this.rightRun = createImage(runRight);
+      this.leftRun = createImage(runLeft);
+      this.rightStand = createImage(standRight);
+      this.leftStand = createImage(standLeft);
       this.sprite = this.rightStand;
       this.spriteWidth = 1201;
-      this.frameLimit = 240
+      this.frameLimit = 240;
    }
 
    draw() {
