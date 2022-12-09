@@ -99,7 +99,7 @@ let experience = {
       'dates': 'May 2021 – Aug. 2022',
       'place': 'Seattle, WA',
       'tools': 'Amazon S3, DynamoDb, AWS Step Functions, Amazon SQS, Amazon Lambda Functions',
-      'languages': 'Python, Java, SQL, XML, Angular, HTML Scala, Java',
+      'languages': 'Python, Java, SQL, XML, Angular, HTML, Scala, Java',
       'info': 'Worked on the inventory control team to develop new features for an internal auditing tool used by the corresponding science team. Developed automated generation of new data for the new features that weren\'t supported yet. Worked on the frontend and backend of the auditing tool to give the user access to the new features and the new data that was generated. Developed the feature to run automated simulations with the click of a button so that the scientists wouldn\'t have to waste so much time doing each step manually. Created a button on the frontend that could make a call to the backend to trigger the simulation.'
    },
    'TA': {
