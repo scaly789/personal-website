@@ -45,6 +45,7 @@ body {
   border-radius: 50%;
   border: 2px solid white;
   overflow: hidden;
+  color: white;
   background: transparent;
  }
 
@@ -54,6 +55,7 @@ body {
   width: 20%;
   margin-left: 1%;
   margin-right: 1%;
+  color: white;
 }
 
  label {
@@ -75,7 +77,6 @@ body {
   border: 2px solid white;
   overflow: hidden;
   background: white;
-  color: white;
  }
 
 /* Styling for the bottom and the detailed info that shows up there */
