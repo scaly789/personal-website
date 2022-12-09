@@ -92,7 +92,7 @@ let experience = {
       'place': '',
       'tools': 'Hello, I\'m Eric Gan, a Software Developer, Mentor, Researcher, and Team Player. I am excited to take my strong background in Computer Science and apply that to software development in the industry in order to help develop new and interesting technologies.',
       'languages': 'You can contact me at 2019egan@gmail.com or 571-733-4464',
-      'info': 'Move the character above with A/left or the D/right keys to navigate my portfolio. Also feel free to use the navigation buttons at the top to go to specific parts of the portfolio!'
+      'info': 'Move the character above with A/left and D/right keys or the buttons on the top to navigate my portfolio. Also feel free to use the navigation buttons at the top to go to specific parts of the portfolio!'
    },
    'Amazon': {
       'title': 'Amazon: Software Development Engineering Intern (2 Summers)',
@@ -807,7 +807,35 @@ function treasury() {
    globalPosition = 5850;
 }
 
+//Functions for the buttons to move the character
+function onLeftDown() {
+   leftPressed = true;
+   char.sprite = char.leftRun;
+   char.frameLimit = 60;
+}
+
+function onRightDown() {
+   rightPressed = true;
+   char.sprite = char.rightRun;
+   char.frameLimit = 60;
+}
+
+function onLeftUp() {
+   leftPressed = false;
+   char.sprite = char.leftStand;
+   char.frameLimit = 240;
+}
+function onRightUp() {
+   rightPressed = false;
+   char.sprite = char.rightStand;
+   char.frameLimit = 240;
+}
+
 //Binding home, castle, and treasury functions to their respective buttons
+document.getElementById("left-button").addEventListener("mousedown", onLeftDown);
+document.getElementById("right-button").addEventListener("mousedown", onRightDown);
+document.getElementById("left-button").addEventListener("mouseup", onLeftUp);
+document.getElementById("right-button").addEventListener("mouseup", onRightUp);
 document.getElementById("home").addEventListener("click", home);
 document.getElementById("castle").addEventListener("click", castle);
 document.getElementById("treasury").addEventListener("click", treasury);
