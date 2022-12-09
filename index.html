@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link rel="stylesheet" href="style.css">
+   </head>
+   
+   <body>
+      <!--Anime.js script for text animation-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+      <!--Flexbox section that contains experience information on the left 
+      and the game on the right-->
+      <div class="overall">
+         <!--Left side of the flex box for information and buttons-->
+         <div class="left">
+            <!--Divs for the 3 navigation buttons-->
+            <div class="nav-buttons">
+               <div class="button">
+                  <button id="home"></button>
+                  <label for="home">Home</label>
+               </div>
+               <div class="button">
+                  <button id="castle"></button>
+                  <label for="castle">Work Experience</label>
+               </div>
+               <div class="button">
+                  <button id="treasury"></button>
+                  <label for="treasury">Projects</label>
+               </div>
+            </div>
+
+            <!--Different sections for the basic experience information-->
+            <div class="information">
+               <div class="title"></div>
+               <div class="dates"></div>
+               <div class="place"></div>
+               <div class="tools"></div>
+               <div class="languages"></div>
+            </div>
+         </div>
+         <!--Right side of the flex box for the game on the canvas-->
+         <canvas id="game"></canvas> 
+      </div>
+
+      <!--Section on the bottom that contains experience details-->
+      <div class="bottom">
+         <div class="details">
+            <div class="info"></div>
+         </div>
+      </div>
+
+      <!--Script to run the game and update the details on the page-->
+      <script src="index.js"></script>
+   </body>
+</html>
+
+

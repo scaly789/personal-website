@@ -1,0 +1,97 @@
+body {
+  background-color: black;
+}
+
+/* Overall flex box styling */
+.overall {
+    margin: 0;
+    background-color: black;
+    display: flex;
+    line-height: 1.5em;
+ }
+
+ /* Styling for the left side experience information */
+.left {
+  background-color: black;
+  color: white;
+  margin-left: 1%;
+  margin-right: 1%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-left: 1%;
+  padding-right: 1%;
+  width: 40%;
+  overflow-wrap: break-word;
+  border-radius: 25px;
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: medium;
+}
+
+/* Spacing out the info sections on the left */
+.title, .dates, .place, .tools, .languages {
+  margin-bottom: 3%;
+}
+
+.bottom {
+  margin-top: 1%;
+  overflow: hidden;
+}
+
+/* Styling for all the button elements */
+ button {
+  padding: 10px;
+  border-radius: 50%;
+  border: 2px solid white;
+  overflow: hidden;
+  background: transparent;
+ }
+
+.button {
+  display: inline-block;
+  text-align: center;
+  width: 20%;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+ label {
+  display: block;
+  color: white;
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: small;
+ }
+
+ .nav-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10%;
+ }
+
+ button:hover {
+  padding: 10px;
+  border-radius: 50%;
+  border: 2px solid white;
+  overflow: hidden;
+  background: white;
+ }
+
+/* Styling for the bottom and the detailed info that shows up there */
+.bottom {
+  background-color: black;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  border-radius: 25px;
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: medium;
+  line-height: 1.5em;
+}
+
+.info {
+  color: white;
+  margin-left: 2%;
+  margin-right: 2%;
+  overflow-wrap: break-word;
+}
+
+
+
